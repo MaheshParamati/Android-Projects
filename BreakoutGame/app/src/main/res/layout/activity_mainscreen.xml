@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.paramati.breakoutgame.Mainscreen">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Game"
+        android:id="@+id/startgame"
+        android:onClick="callgameactivity"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/highscores"
+        android:layout_alignStart="@+id/highscores" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High Scores"
+        android:id="@+id/highscores"
+        android:onClick="tohighscore"
+        android:layout_below="@id/startgame"
+
+        android:layout_alignStart="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:id="@+id/seekBar"
+        android:max="10"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="  Set the speed of the Ball"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/seekBar"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="About:"
+        android:id="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/startgame"
+        android:textColor="#080808"
+        android:textSize="30dp"
+        android:textIsSelectable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This game contains Bricks with four different colors where each requires certain number of hits to blast. For each hit you gain 10 points. You win if you blast all the Bricks. Press each side of the screen for controlling paddle."
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:textColor="#050505"
+        android:textSize="20dp" />
+
+</RelativeLayout>
